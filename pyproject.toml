@@ -19,6 +19,7 @@ classifiers = [
 dependencies = [
     # Add your dependencies here
     # "torch",
+    "ace-step @ git+https://github.com/rsxdalv/tts-webui.ACE-Step-1.5@tts-webui"
 ]
 urls = { "Homepage" = "https://github.com/rsxdalv/tts_webui_extension.acestep15" }
 

@@ -4,34 +4,42 @@ import gradio as gr
 def acestep15_ui():
     gr.Markdown(
         """
-    # Acestep15
-    
-    This is a template extension. Replace this content with your extension's functionality.
-    
-    To use it, simply modify this UI and add your custom logic.
-    """
+        ## AceStep 1.5
+        
+        Click on the "?" buttons to see hints.
+        
+        Current issues:
+
+        The default installation currently does not setup nano-vllm thus the performance is decreased. Manually installing nano-vllm will work with the UI automatically.
+
+        Examples via "🎲 Click Me" do not work currently.
+
+        The checkpoints (10GB) are downladed to site-packages, e.g., installer_files/env/lib/site-packages/checkpoints/
+        
+        This extension will be updated periodically, because the official Ace-Step repository is still being actively modified.
+"""
     )
-    
-    # Add your UI components here
-    # Example:
-    # with gr.Row():
-    #     with gr.Column():
-    #         input_text = gr.Textbox(label="Input")
-    #         button = gr.Button("Process")
-    #     with gr.Column():
-    #         output_text = gr.Textbox(label="Output")
-    # 
-    # button.click(
-    #     fn=your_processing_function,
-    #     inputs=[input_text],
-    #     outputs=[output_text],
-    #     api_name="acestep15",
-    # )
+
+    from acestep.ui.gradio import create_gradio_interface
+    from acestep.handler import AceStepHandler
+    from acestep.llm_inference import LLMHandler
+    from acestep.dataset_handler import DatasetHandler
+
+    dit_handler = AceStepHandler()
+    llm_handler = LLMHandler()
+    dataset_handler = DatasetHandler()
+    create_gradio_interface(
+        dit_handler,
+        llm_handler,
+        dataset_handler,
+        init_params={"pre_initialized": False},
+        language="en",
+    )
 
 
 def extension__tts_generation_webui():
     acestep15_ui()
-    
+
     return {
         "package_name": "tts_webui_extension.acestep15",
         "name": "Acestep15",

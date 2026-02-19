@@ -42,15 +42,15 @@ def extension__tts_generation_webui():
 
     return {
         "package_name": "tts_webui_extension.acestep15",
-        "name": "Acestep15",
-        "requirements": "git+https://github.com/rsxdalv/tts_webui_extension.acestep15@main",
-        "description": "A template extension for TTS Generation WebUI",
+        "name": "ACE-Step 1.5",
+        "requirements": "git+https://github.com/rsxdalv/tts_webui_extension.acestep15@tts-webui",
+        "description": "ACE-Step: The most powerful local music generation model that outperforms most commercial alternatives, supporting Mac, AMD, Intel, and CUDA devices.",
         "extension_type": "interface",
-        "extension_class": "text-to-speech",
-        "author": "Your Name",
+        "extension_class": "audio-music-generation",
+        "author": "ACE-Step",
         "extension_author": "rsxdalv",
         "license": "MIT",
-        "website": "https://github.com/rsxdalv/tts_webui_extension.acestep15",
+        "website": "https://github.com/ACE-Step/ACE-Step-1.5",
         "extension_website": "https://github.com/rsxdalv/tts_webui_extension.acestep15",
         "extension_platform_version": "0.0.1",
     }

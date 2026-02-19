@@ -9,7 +9,7 @@ This is a template extension. Replace this content with your extension's descrip
 ## Installation
 
 ```bash
-pip install git+https://github.com/rsxdalv/tts_webui_extension.acestep15@main
+pip install git+https://github.com/rsxdalv/tts_webui_extension.acestep15@tts-webui
 ```
 
 ## Usage

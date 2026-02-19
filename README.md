@@ -1,10 +1,4 @@
-# Acestep15
-
-A template extension for [TTS WebUI](https://github.com/rsxdalv/tts-webui).
-
-## Description
-
-This is a template extension. Replace this content with your extension's description.
+# Ace Step 1.5 extension for [TTS WebUI](https://github.com/rsxdalv/tts-webui).
 
 ## Installation
 
